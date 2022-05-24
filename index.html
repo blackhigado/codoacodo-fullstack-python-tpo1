@@ -6,15 +6,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet" />
     <title>Codo a Codo - TPO1</title>
 </head>
 
 <body>
 
-    <h1>Codo a Codo - TPO1</h1>
+    <div id="container">
 
+        <!-- header -->
+        <header>
+
+            <!-- logo -->
+            <div id="logo-wrapper">
+                <a href="/" title="Go to home page">
+                    <img src="./img/site_logo.png" alt="Site logo" id="logo">
+                </a>
+            </div>
+
+            <!-- primary nav -->
+            <nav>
+                <ul id="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="#hero-wrapper">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-wrapper">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing-wrapper">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- main -->
+        <main>
+
+            <!-- hero section -->
+            <section aria-labelledby="hero-wrapper-label" class="main-item" id="hero-wrapper">
+
+                <!-- main hero article -->
+                <article id="hero-main">
+                    <h1 id="hero-heading">Lorem ipsum .dolor sit amet. consectetur adipisicing elit. </h1>
+                    <form action="#" id="hero-form">
+                        <fieldset>
+                            <label id="email-label">
+                                <input type="email" name="email" id="email" placeholder="name@email.com" required>
+                            </label>
+                            <input type="submit" value="Get started">
+                        </fieldset>
+
+                    </form>
+                </article>
+
+                <!-- image hero article -->
+                <article id="hero-img">
+                    <p>☕</p>
+                </article>
+
+            </section>
+
+            <!-- about section -->
+            <section aria-labelledby="about-wrapper-label" class="main-item" id="about-wrapper">
+                <article id="about-text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ut reiciendis beatae alias
+                        aliquam. Ipsum, ex nemo eligendi dolorum enim velit maiores distinctio eveniet quia illo porro!
+                        Quam, perspiciatis consequuntur.
+                    </p>
+                </article>
+                <article id="about-step-1">
+                    <p>Step 1</p>
+                </article>
+                <article id="about-step-2">
+                    <p>Step 2</p>
+                </article>
+                <article id="about-step-3">
+                    <p>Step 3</p>
+                </article>
+            </section>
+
+            <!-- pricing section -->
+            <section aria-labelledby="pricing-wrapper-label" class="main-item" id="pricing-wrapper">
+                <article class="pricing-item" id="pricing-item-1">
+                    <p>pricing-item-1</p>
+                </article>
+                <article class="pricing-item" id="pricing-item-2">
+                    <p>pricing-item-2</p>
+                </article>
+                <article class="pricing-item" id="pricing-item-3">
+                    <p>pricing-item-3</p>
+                </article>
+            </section>
+
+        </main>
+
+        <!-- footer -->
+        <footer id="primary-footer">
+            <p><code>Footer</code></p>
+        </footer>
+
+    </div>
+
+    <!-- Script -->
     <script src="./js/scripts.js"></script>
-
 </body>
 
 </html>
