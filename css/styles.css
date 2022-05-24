@@ -1,3 +1,263 @@
+/* 
+----------------------------------------------
+Variables
+----------------------------------------------  
+*/
+:root {
+  font-size: 62.5%;
+
+  --lightBackground: lightgreen;
+  --borderColor: lightseagreen;
+
+  --fontFamily: "Roboto", sans-serif;
+
+  --generalPadding: 1rem;
+  --generalMargin: 1rem;
+  --generalPadding3: 3rem;
+  --generalMargin3: 3rem;
+  --logoMaxWidth: 5rem;
+  --navFontSize: 1.5rem;
+  --heroHeadingFontSize: 5.5rem;
+}
+
+/* 
+----------------------------------------------
+Globals
+----------------------------------------------  
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: blueviolet;
+  background-color: var(--lightBackground);
+  font-family: var(--fontFamily);
+  font-size: 2rem;
+}
+
+/* 
+----------------------------------------------
+grid container
+----------------------------------------------  
+*/
+
+#container {
+  display: grid;
+
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-rows: 10rem 1fr 35rem;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  /* height: 100vh; */
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+----------------------------------------------
+Header
+----------------------------------------------  
+*/
+
+header {
+  grid-area: header;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+-----
+logo
+----- 
+*/
+#logo-wrapper {
+  flex-grow: 1;
+}
+#logo {
+  width: 100%;
+  height: auto;
+
+  max-width: 5rem;
+}
+
+/* 
+-----
+nav
+----- 
+*/
+nav {
+  flex-grow: 2;
+  font-size: var(--navFontSize);
+}
+
+#nav-list {
+  display: flex;
+
+  justify-content: flex-end;
+  gap: 1rem;
+
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 
+----------------------------------------------
+Main
+----------------------------------------------  
+*/
+main {
+  grid-area: main;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+.main-item {
+  height: auto;
+  margin: var(--generalMargin3);
+  padding: var(--generalPadding3);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+-------------
+Hero Section
+------------- 
+*/
+#hero-wrapper {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+#hero-main {
+  display: flex;
+
+  flex-direction: column;
+
+  text-align: left;
+  width: 50%;
+}
+
+#hero-heading {
+  font-size: var(--heroHeadingFontSize);
+  border: 0.1rem dashed var(--borderColor);
+}
+
+fieldset {
+  border-style: none;
+}
+
+#hero-form {
+  border: 0.1rem dashed var(--borderColor);
+}
+
+#hero-img p {
+  font-size: 20rem;
+}
+
+/* 
+-------------
+About Section
+------------- 
+*/
+#about-wrapper {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about-text {
+  width: 50%;
+}
+
+/* 
+----------------
+Pricing Section
+---------------- 
+*/
+#pricing-wrapper {
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pricing-item {
+  width: 15rem;
+  height: 20rem;
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+----------------------------------------------
+Footer
+----------------------------------------------  
+*/
+footer {
+  grid-area: footer;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-direction: column;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+#footer-main {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.5rem;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+
+  max-width: 30rem;
+}
+
+#footer-aux {
+  display: flex;
+
+  justify-content: flex-end;
+
+  border-top: 0.1rem solid var(--borderColor);
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
 }
