@@ -52,7 +52,7 @@ grid container
     "footer";
 
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-rows: 10rem 1fr 25rem;
+  grid-template-rows: 10rem 1fr 35rem;
 
   margin: var(--generalMargin);
   padding: var(--generalPadding);
@@ -222,11 +222,42 @@ Pricing Section
 Footer
 ----------------------------------------------  
 */
-#primary-footer {
+footer {
   grid-area: footer;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-direction: column;
 
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
   border: 0.1rem dashed var(--borderColor);
+}
+
+#footer-main {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.5rem;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+
+  max-width: 30rem;
+}
+
+#footer-aux {
+  display: flex;
+
+  justify-content: flex-end;
+
+  border-top: 0.1rem solid var(--borderColor);
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
 }
