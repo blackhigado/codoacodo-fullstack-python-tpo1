@@ -1,0 +1,245 @@
+/* 
+----------------------------------------------
+Variables
+----------------------------------------------  
+*/
+:root {
+  font-size: 62.5%;
+
+  --lightBackground: lightgreen;
+  --borderColor: lightseagreen;
+
+  --fontFamily: "Roboto", sans-serif;
+
+  --generalPadding: 1rem;
+  --generalMargin: 1rem;
+  --generalPadding3: 3rem;
+  --generalMargin3: 3rem;
+  --logoMaxWidth: 5rem;
+
+  --bodyFontSize: 2rem;
+  --navFontSize: 1.5rem;
+  --heroHeadingFontSize: 5.5rem;
+
+  /* Breakpoints desktop 1200px */
+  --desktopBodyFontSize: 1.75rem;
+  --desktopNavFontSize: 1.4rem;
+  --desktopHeroHeadingFontSize: 5rem;
+
+  /* Breakpoints laptop 992px */
+  --laptopBodyFontSize: 1.5rem;
+  --laptopNavFontSize: 1.3rem;
+  --laptopHeroHeadingFontSize: 4.5rem;
+
+  /* Breakpoints tablet 768px */
+  --tabletBodyFontSize: 1.25rem;
+  --tabletpNavFontSize: 1.2rem;
+  --tabletHeroHeadingFontSize: 4rem;
+
+  /* Breakpoints mobile 576px */
+  --mobileBodyFontSize: 1rem;
+  --mobileNavFontSize: 1.1rem;
+  --mobileHeroHeadingFontSize: 3.5rem;
+}
+
+/* 
+  ----------------------------------------------
+  Globals
+  ----------------------------------------------  
+  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--lightBackground);
+  font-family: var(--fontFamily);
+  font-size: var(--bodyFontSize);
+}
+
+/* 
+  ----------------------------------------------
+  flex container
+  ----------------------------------------------  
+*/
+
+#contact-container {
+  display: flex;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+
+  height: 100vh;
+}
+
+/* 
+  ----------------------------------------------
+  form 
+  ----------------------------------------------  
+*/
+
+#contact-form-wrapper {
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  width: 50%;
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+----------
+Header
+----------
+*/
+
+#form-header {
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+----
+logo
+----
+*/
+
+#logo {
+  width: 100%;
+  height: auto;
+
+  max-width: 5rem;
+}
+
+/* 
+----------
+form main
+----------
+*/
+
+#form-main {
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+  ----------------------------------------------
+  aside 
+  ----------------------------------------------  
+*/
+
+#contact-aside-wrapper {
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border-left: 0.1rem solid var(--borderColor);
+}
+
+/* 
+---------------------
+section map
+----------------------
+*/
+#contact-map {
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+---------------------
+section social links
+----------------------
+*/
+#contact-social-links {
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border: 0.1rem dashed var(--borderColor);
+}
+
+/* 
+----------------------------------------------
+Media Queries
+----------------------------------------------  
+*/
+
+/*
+    Breakpoints
+	1200   ->    desktop
+	992    ->    laptop
+	768    ->    tablet
+  576    ->    mobile        
+*/
+
+/* 
+---------------------
+Breakpoint: desktop
+---------------------
+*/
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: lightblue;
+    font-size: var(--desktopBodyFontSize);
+  }
+}
+
+/* 
+  ---------------------
+  Breakpoint: laptop
+  ---------------------
+  */
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: lightcoral;
+    font-size: var(--laptopBodyFontSize);
+  }
+
+  #contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact-aside-wrapper {
+    border-top: 0.1rem solid var(--borderColor);
+    border-left: none;
+  }
+}
+
+/* 
+  ---------------------
+  Breakpoint: tablet
+  ---------------------
+  */
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: lightgoldenrodyellow;
+    font-size: var(--tabletBodyFontSize);
+  }
+}
+
+/* 
+  ---------------------
+  Breakpoint: mobile
+  ---------------------
+  */
+
+@media screen and (max-width: 576px) {
+  body {
+    background-color: lightseagreen;
+    font-size: var(--mobiletBodyFontSize);
+  }
+}

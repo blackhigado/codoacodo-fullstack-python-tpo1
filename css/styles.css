@@ -16,8 +16,30 @@ Variables
   --generalPadding3: 3rem;
   --generalMargin3: 3rem;
   --logoMaxWidth: 5rem;
+
+  --bodyFontSize: 2rem;
   --navFontSize: 1.5rem;
   --heroHeadingFontSize: 5.5rem;
+
+  /* Breakpoints desktop 1200px */
+  --desktopBodyFontSize: 1.75rem;
+  --desktopNavFontSize: 1.4rem;
+  --desktopHeroHeadingFontSize: 5rem;
+
+  /* Breakpoints laptop 992px */
+  --laptopBodyFontSize: 1.5rem;
+  --laptopNavFontSize: 1.3rem;
+  --laptopHeroHeadingFontSize: 4.5rem;
+
+  /* Breakpoints tablet 768px */
+  --tabletBodyFontSize: 1.25rem;
+  --tabletpNavFontSize: 1.2rem;
+  --tabletHeroHeadingFontSize: 4rem;
+
+  /* Breakpoints mobile 576px */
+  --mobileBodyFontSize: 1rem;
+  --mobileNavFontSize: 1.1rem;
+  --mobileHeroHeadingFontSize: 3.5rem;
 }
 
 /* 
@@ -34,7 +56,7 @@ Globals
 body {
   background-color: var(--lightBackground);
   font-family: var(--fontFamily);
-  font-size: 2rem;
+  font-size: var(--bodyFontSize);
 }
 
 /* 
@@ -260,4 +282,144 @@ footer {
 
   margin: var(--generalMargin);
   padding: var(--generalPadding);
+}
+
+/* 
+----------------------------------------------
+Media Queries
+----------------------------------------------  
+*/
+
+/*
+    Breakpoints
+	1200   ->    desktop
+	992    ->    laptop
+	768    ->    tablet
+  576    ->    mobile        
+*/
+
+/* 
+---------------------
+Breakpoint: desktop
+---------------------
+*/
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: lightblue;
+    font-size: var(--desktopBodyFontSize);
+  }
+
+  nav {
+    font-size: var(--desktopNavFontSize);
+  }
+
+  #hero-heading {
+    font-size: var(--desktopHeroHeadingFontSize);
+  }
+}
+
+/* 
+---------------------
+Breakpoint: laptop
+---------------------
+*/
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: lightcoral;
+    font-size: var(--laptopBodyFontSize);
+  }
+
+  nav {
+    font-size: var(--laptopNavFontSize);
+  }
+
+  #hero-heading {
+    font-size: var(--laptopHeroHeadingFontSize);
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #hero-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #hero-main {
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    gap: 1rem;
+  }
+
+  #about-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  #pricing-wrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  #footer-main {
+    max-width: none;
+    align-items: center;
+  }
+
+  #footer-aux {
+    justify-content: center;
+  }
+}
+
+/* 
+---------------------
+Breakpoint: tablet
+---------------------
+*/
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: lightgoldenrodyellow;
+    font-size: var(--tabletBodyFontSize);
+  }
+
+  nav {
+    font-size: var(--tabletNavFontSize);
+  }
+
+  #hero-heading {
+    font-size: var(--tabletHeroHeadingFontSize);
+  }
+}
+
+/* 
+---------------------
+Breakpoint: mobile
+---------------------
+*/
+
+@media screen and (max-width: 576px) {
+  body {
+    background-color: lightseagreen;
+    font-size: var(--mobiletBodyFontSize);
+  }
+
+  nav {
+    font-size: var(--mobileNavFontSize);
+  }
+
+  #hero-heading {
+    font-size: var(--mobileHeroHeadingFontSize);
+  }
+
+  #hero-img p {
+    font-size: 10rem;
+  }
 }
