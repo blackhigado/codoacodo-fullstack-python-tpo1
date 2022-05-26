@@ -6,8 +6,11 @@ Variables
 :root {
   font-size: 62.5%;
 
-  --lightBackground: #f2edf2;
+  --backgroundColor: #f2edf2;
   --borderColor: lightseagreen;
+  --buttonColor: #303048;
+  --buttonTextColor: #f1f0f0;
+  --auxColor: #f3fb34;
 
   --fontFamily: "Roboto", sans-serif;
 
@@ -19,27 +22,27 @@ Variables
 
   --bodyFontSize: 2rem;
   --navFontSize: 1.5rem;
-  --heroHeadingFontSize: 5.5rem;
+  --heroHeadingFontSize: 10rem;
 
   /* Breakpoints desktop 1200px */
   --desktopBodyFontSize: 1.75rem;
   --desktopNavFontSize: 1.4rem;
-  --desktopHeroHeadingFontSize: 5rem;
+  --desktopHeroHeadingFontSize: 8rem;
 
   /* Breakpoints laptop 992px */
   --laptopBodyFontSize: 1.5rem;
   --laptopNavFontSize: 1.3rem;
-  --laptopHeroHeadingFontSize: 4.5rem;
+  --laptopHeroHeadingFontSize: 7rem;
 
   /* Breakpoints tablet 768px */
   --tabletBodyFontSize: 1.25rem;
   --tabletpNavFontSize: 1.2rem;
-  --tabletHeroHeadingFontSize: 4rem;
+  --tabletHeroHeadingFontSize: 6rem;
 
   /* Breakpoints mobile 576px */
   --mobileBodyFontSize: 1rem;
   --mobileNavFontSize: 1.1rem;
-  --mobileHeroHeadingFontSize: 3.5rem;
+  --mobileHeroHeadingFontSize: 5rem;
 }
 
 /* 
@@ -53,8 +56,13 @@ Globals
   box-sizing: border-box;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: var(--lightBackground);
+  background-color: var(--backgroundColor);
   font-family: var(--fontFamily);
   font-size: var(--bodyFontSize);
 }
@@ -183,20 +191,87 @@ Hero Section
   flex-direction: column;
 
   text-align: left;
-  width: 50%;
+  width: 50vw;
 }
+
+/* 
+h1 
+*/
 
 #hero-heading {
   font-size: var(--heroHeadingFontSize);
   border: 0.1rem dashed var(--borderColor);
 }
 
+/* 
+p 
+*/
+
+#hero-main p {
+  padding-top: var(--generalPadding);
+}
+
+/* 
+form 
+*/
+
+#hero-form {
+  border: 0.1rem dashed var(--borderColor);
+
+  width: 85%;
+
+  margin-top: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  border-radius: 4rem;
+  background-color: var(--buttonColor);
+}
+
 fieldset {
   border-style: none;
 }
 
-#hero-form {
-  border: 0.1rem dashed var(--borderColor);
+#email {
+  min-width: 25vw;
+
+  border: none;
+  padding-left: 1.5rem;
+
+  background: transparent;
+  color: var(--buttonTextColor);
+
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  outline: none;
+}
+
+#submit-button {
+  min-width: 10vw;
+  min-height: 8vh;
+
+  font-weight: bold;
+  background-color: var(--backgroundColor);
+
+  border-radius: 4rem;
+  border: none;
+}
+
+#submit-button:hover {
+  background-color: var(--auxColor);
+  transition: 0.5s;
+  color: var(--buttonColor);
+}
+#submit-button:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 0.2rem var(--auxColor);
+  transition: 0.5s;
+}
+
+#submit-button:active {
+  background-color: var(--backgroundColor);
+  transition: 0.5s;
+  color: var(--buttonColor);
 }
 
 /* 
@@ -329,6 +404,18 @@ Breakpoint: desktop
   #hero-heading {
     font-size: var(--desktopHeroHeadingFontSize);
   }
+
+  #hero-form {
+    width: 80%;
+  }
+
+  #email {
+    min-width: 20vw;
+
+    padding-left: 1.5rem;
+
+    font-size: 1.5rem;
+  }
 }
 
 /* 
@@ -363,9 +450,23 @@ Breakpoint: laptop
 
   #hero-main {
     flex-direction: column;
-    text-align: center;
-    width: auto;
+
+    align-items: center;
     gap: 1rem;
+
+    text-align: center;
+  }
+
+  #hero-form {
+    width: 75%;
+  }
+
+  #email {
+    min-width: 15vw;
+
+    padding-left: 1rem;
+
+    font-size: 1rem;
   }
 
   #about-wrapper {
@@ -409,6 +510,22 @@ Breakpoint: tablet
   #hero-heading {
     font-size: var(--tabletHeroHeadingFontSize);
   }
+
+  /* #hero-form {
+    width: 71%;
+  } */
+
+  #submit-button {
+    font-size: 1rem;
+  }
+
+  #email {
+    min-width: 12vw;
+
+    padding-left: 1rem;
+
+    font-size: 1rem;
+  }
 }
 
 /* 
@@ -429,6 +546,24 @@ Breakpoint: mobile
 
   #hero-heading {
     font-size: var(--mobileHeroHeadingFontSize);
+  }
+
+  #hero-form {
+    width: 100%;
+  }
+
+  #email {
+    min-width: 12vw;
+
+    padding-left: 1rem;
+
+    font-size: 1rem;
+  }
+
+  #submit-button {
+    font-size: 0.9rem;
+    min-width: 14vw;
+    min-height: 10vh;
   }
 
   #hero-img p {
