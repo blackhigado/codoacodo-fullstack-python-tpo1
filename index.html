@@ -60,7 +60,14 @@
 
                 <!-- image hero article -->
                 <article id="hero-img">
-                    <p>☕</p>
+                    <figure>
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="./img/image-large.png" type="image/png" />
+                            <source media="(min-width: 600px)" srcset="./img/image-medium.png" type="image/png" />
+                            <source srcset="./img/image-small.png" type="image/png" />
+                            <img src="./img/image-medium.png" type="image/png" alt="coffee time" />
+                        </picture>
+                    </figure>
                 </article>
 
             </section>

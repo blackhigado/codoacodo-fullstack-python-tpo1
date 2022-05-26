@@ -6,7 +6,7 @@ Variables
 :root {
   font-size: 62.5%;
 
-  --lightBackground: lightgreen;
+  --lightBackground: #f2edf2;
   --borderColor: lightseagreen;
 
   --fontFamily: "Roboto", sans-serif;
@@ -199,8 +199,20 @@ fieldset {
   border: 0.1rem dashed var(--borderColor);
 }
 
-#hero-img p {
-  font-size: 20rem;
+/* 
+hero image 
+*/
+
+#hero-img {
+  width: 50%;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+}
+
+picture img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* 
