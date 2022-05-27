@@ -111,7 +111,7 @@ header {
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
 }
 
 /* 
@@ -121,12 +121,25 @@ logo
 */
 #logo-wrapper {
   flex-grow: 1;
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
 }
+
 #logo {
   width: 100%;
   height: auto;
 
   max-width: 5rem;
+}
+
+#logo-text {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
 }
 
 /* 
@@ -191,7 +204,7 @@ main {
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
 }
 
 .main-item {
