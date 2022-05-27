@@ -6,8 +6,11 @@ Variables
 :root {
   font-size: 62.5%;
 
-  --lightBackground: lightgreen;
+  --backgroundColor: #f2edf2;
   --borderColor: lightseagreen;
+  --buttonColor: #303048;
+  --buttonTextColor: #f1f0f0;
+  --auxColor: #f3fb34;
 
   --fontFamily: "Roboto", sans-serif;
 
@@ -54,7 +57,7 @@ Variables
 }
 
 body {
-  background-color: var(--lightBackground);
+  background-color: var(--backgroundColor);
   font-family: var(--fontFamily);
   font-size: var(--bodyFontSize);
 }
@@ -68,10 +71,13 @@ body {
 #contact-container {
   display: flex;
 
+  justify-content: space-between;
+  gap: 3rem;
+
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
 
   height: 100vh;
 }
@@ -88,7 +94,7 @@ body {
 
   width: 50%;
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
 }
 
 /* 
@@ -97,11 +103,17 @@ Header
 ----------
 */
 
-#form-header {
+#logo-wrapper {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
 }
 
 /* 
@@ -117,6 +129,12 @@ logo
   max-width: 5rem;
 }
 
+#logo-text {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
 /* 
 ----------
 form main
@@ -124,11 +142,63 @@ form main
 */
 
 #form-main {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 3rem;
+
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
 }
+
+#form-main-heading {
+  text-align: center;
+}
+
+form {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  min-width: 20vw;
+  min-height: 50vh;
+
+  margin: var(--generalMargin);
+  padding: var(--generalPadding);
+
+  background-color: var(--buttonColor);
+  border-radius: 1rem;
+}
+
+fieldset {
+  width: 100%;
+  border: none;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.8rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+}
+
+/* .form-item {
+  width: 100%;
+} */
 
 /* 
   ----------------------------------------------
@@ -137,10 +207,23 @@ form main
 */
 
 #contact-aside-wrapper {
-  margin: var(--generalMargin);
-  padding: var(--generalPadding);
+  display: flex;
 
-  border-left: 0.1rem solid var(--borderColor);
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+
+  margin: var(--generalMargin);
+  /* padding: var(--generalPadding); */
+
+  width: 50%;
+
+  background-color: var(--buttonColor);
+  border-radius: 1rem;
+
+  /* border-left: 0.1rem solid var(--borderColor); */
 }
 
 /* 
@@ -152,7 +235,14 @@ section map
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
+}
+
+#map {
+  width: 35vw;
+  height: 35vh;
+  border-radius: 2rem;
+  border: none;
 }
 
 /* 
@@ -160,11 +250,44 @@ section map
 section social links
 ----------------------
 */
-#contact-social-links {
+#social-links-wrapper {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
   margin: var(--generalMargin);
   padding: var(--generalPadding);
 
-  border: 0.1rem dashed var(--borderColor);
+  /* border: 0.1rem dashed var(--borderColor); */
+}
+
+.social-icons {
+  color: var(--backgroundColor);
+}
+
+.social-icons:hover {
+  color: var(--auxColor);
+  background-color: var(--buttonColor);
+  border-radius: 3rem;
+  padding: 0.5rem;
+  transition: 0.5s;
+}
+
+.social-icons:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 0.2rem var(--auxColor);
+  transition: 0.5s;
+}
+
+.social-icons:active {
+  background-color: var(--backgroundColor);
+  transition: 0.5s;
+  color: var(--buttonColor);
+  border-radius: 0.7rem;
 }
 
 /* 
