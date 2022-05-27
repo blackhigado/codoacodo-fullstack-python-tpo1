@@ -312,7 +312,7 @@ Breakpoint: desktop
 
 @media screen and (max-width: 1200px) {
   body {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     font-size: var(--desktopBodyFontSize);
   }
 }
@@ -325,7 +325,7 @@ Breakpoint: desktop
 
 @media screen and (max-width: 992px) {
   body {
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     font-size: var(--laptopBodyFontSize);
   }
 
@@ -349,7 +349,7 @@ Breakpoint: desktop
 
 @media screen and (max-width: 768px) {
   body {
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
     font-size: var(--tabletBodyFontSize);
   }
 }
@@ -362,7 +362,11 @@ Breakpoint: desktop
 
 @media screen and (max-width: 576px) {
   body {
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
     font-size: var(--mobiletBodyFontSize);
+  }
+
+  #logo-wrapper {
+    flex-direction: column;
   }
 }
