@@ -6,6 +6,7 @@ const validate = (e) => {
         e.preventDefault();
 
         const emailAddress = document.getElementById('email');
+        const textArea = document.getElementById('comments');
         const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
         if (emailAddress.value.trim() === '') {
@@ -17,6 +18,12 @@ const validate = (e) => {
         if (!emailAddress.value.match(validRegex)) {
                 alert('ERROR: Invalid email address.');
                 emailAddress.focus();
+                return false;
+        }
+
+        if (textArea.value == '') {
+                alert('WARNING: Please Provide Details!');
+                textArea.focus();
                 return false;
         }
 
