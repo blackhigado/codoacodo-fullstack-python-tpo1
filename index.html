@@ -23,7 +23,7 @@
             <!-- logo -->
             <div id="logo-wrapper">
                 <a href="/" title="Go to home page">
-                    <img src="./img/coffee-bean.png" alt="Site logo" id="logo">
+                    <img src="./img/icon-coffee-bean.png" alt="Site logo" id="logo">
                 </a>
 
             </div>
@@ -41,7 +41,7 @@
         </header>
 
         <!-- main -->
-        <main>
+        <main id="main-wrapper">
 
             <!-- hero section -->
             <section aria-labelledby="hero-wrapper-label" class="main-item" id="hero-wrapper">
@@ -69,7 +69,7 @@
                 <!-- image hero article -->
                 <article id="hero-img">
                     <figure>
-                        <picture>
+                        <picture id="hero-img-item">
                             <source media="(min-width: 900px)" srcset="./img/image-large.png" type="image/png" />
                             <source media="(min-width: 600px)" srcset="./img/image-medium.png" type="image/png" />
                             <source srcset="./img/image-small.png" type="image/png" />
@@ -82,21 +82,50 @@
 
             <!-- about section -->
             <section aria-labelledby="about-wrapper-label" class="main-item" id="about-wrapper">
+
                 <article id="about-text">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ut reiciendis beatae alias
-                        aliquam. Ipsum, ex nemo eligendi dolorum enim velit maiores distinctio eveniet quia illo porro!
-                        Quam, perspiciatis consequuntur.
-                    </p>
+                    <h2>We take the coffee to your house the day you need it.</h2>
                 </article>
-                <article id="about-step-1">
-                    <p>Step 1</p>
+
+                <article class="about-item" id="about-step-1">
+
+                    <figure>
+                        <picture>
+                            <img src="./img/icon-coffee-bean-2.png" alt="coffee beans icon" class="about-icons">
+                        </picture>
+                    </figure>
+                    <h3>What kind of coffee would you like to receive?</h3>
+                    <p>choose from the wide variety of specialty coffee and different origins that we have.</p>
+
                 </article>
-                <article id="about-step-2">
-                    <p>Step 2</p>
+
+                <article class="about-item" id="about-step-2">
+
+
+                    <figure>
+                        <picture>
+                            <img src="./img/icon-grind.png" alt="coffee grind icon" class="about-icons">
+                        </picture>
+                    </figure>
+                    <h3>What grind do you need?</h3>
+                    <p>Choose from fine, medium and coarse grinds. or directly to the grains.</p>
+
                 </article>
-                <article id="about-step-3">
-                    <p>Step 3</p>
+
+
+                <article class="about-item" id="about-step-3">
+
+
+                    <figure>
+                        <picture>
+                            <img src="./img/icon-package-2.png" alt="coffee package icon" class="about-icons">
+                        </picture>
+                    </figure>
+                    <h3>How much coffee do you want to receive?</h3>
+                    <p>choose how much coffee you want, we have three sizes: 350,450, 1kg.</p>
+
                 </article>
+
             </section>
 
             <!-- pricing section -->
