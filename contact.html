@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/1d340182ef.js" crossorigin="anonymous"></script>
+
     <title>Contact</title>
 </head>
 
@@ -19,14 +22,13 @@
         <!-- contact form -->
         <div id="contact-form-wrapper">
 
-            <header id="form-header">
+            <header id="logo-wrapper">
 
                 <!-- logo -->
-                <div id="logo-wrapper">
-                    <a href="./index.html" title="Go to home page">
-                        <img src="./img/site_logo.png" alt="Site logo" id="logo">
-                    </a>
-                </div>
+                <a href="/" title="Go to home page">
+                    <img src="./img/icon-coffee-bean.png" alt="Site logo" id="logo">
+                </a>
+                <p id="logo-text">coffeebox</p>
 
             </header>
 
@@ -40,8 +42,8 @@
                 <form action="#">
 
                     <fieldset>
-                        <label id="email-label"><input type="email" name="email" id="email" placeholder="email"
-                                required></label>
+                        <label id="email-label"><input type="email" name="email" id="email" placeholder="email" required
+                                class="form-item"></label>
                     </fieldset>
 
                     <fieldset>
@@ -66,16 +68,31 @@
 
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.325947651316!2d-58.45196358528489!3d-34.54530176191552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb43ae6018ddf%3A0x3d7f60a75bfa308a!2sEstadio%20Monumental%20Antonio%20Vespucio%20Liberti!5e0!3m2!1ses-419!2sar!4v1653534766688!5m2!1ses-419!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade" id="map">
+                    <!-- width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" -->
+
+                </iframe>
 
             </section>
 
             <!-- social links -->
-            <section id="contact-social-links">
-                <a href="#" title="Instagram link">instagram</a>
+            <section id="social-links-wrapper">
+                <!-- <a href="#" title="Instagram link">instagram</a>
                 <a href="#" title="Twitter link">Twitter</a>
-                <a href="#" title="Spotify link">Spotify</a>
+                <a href="#" title="Spotify link">Spotify</a> -->
+
+                <a href="https://www.instagram.com/" title="Instagram link" target="_blank" class="social-icons">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                </a>
+
+                <a href="https://twitter.com/" title="Twitter link" target="_blank" class="social-icons">
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+
+                <a href="https://www.spotify.com/" title="Spotify link" target="_blank" class="social-icons">
+                    <i class="fa-brands fa-spotify fa-xl"></i>
+                </a>
+
             </section>
         </aside>
 
