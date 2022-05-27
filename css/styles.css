@@ -149,6 +149,29 @@ nav {
 .nav-link {
   text-decoration: none;
   cursor: pointer;
+
+  color: black;
+
+  position: relative;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+#nav-list a::before {
+  content: "";
+  background-color: var(--auxColor);
+  position: absolute;
+  left: 0;
+  bottom: 0.3rem;
+  width: 100%;
+  height: 0.5rem;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav-list a:hover::before {
+  bottom: 0;
+  height: 100%;
 }
 
 /* 
