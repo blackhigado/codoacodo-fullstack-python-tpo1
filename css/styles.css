@@ -369,10 +369,75 @@ Pricing Section
 }
 
 .pricing-item {
-  width: 15rem;
-  height: 20rem;
+  display: flex;
 
-  border: 0.1rem dashed var(--borderColor);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  width: 15vw;
+  min-height: 50vh;
+
+  /* border: 0.1rem dashed var(--borderColor); */
+  border-radius: 2rem;
+
+  background-color: var(--buttonColor);
+  color: var(--backgroundColor);
+
+  padding: var(--generalPadding);
+  margin: var(--generalMargin);
+}
+
+.pricing-icons {
+  display: flex;
+  gap: 1rem;
+  /* width: 5rem; */
+  /* max-height: auto; */
+}
+
+.pricing-icon {
+  width: 3vw;
+  background-color: var(--backgroundColor);
+  border-radius: 5rem;
+  padding: 1rem;
+}
+
+.price {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.pricing-button {
+  min-width: 10vw;
+  min-height: 8vh;
+
+  font-weight: bold;
+  background-color: var(--auxColor);
+  color: var(--buttonColor);
+
+  border-radius: 4rem;
+  border: none;
+}
+
+.pricing-button:hover {
+  background-color: var(--buttonColor);
+  color: var(--buttonTextColor);
+  box-shadow: 0 0 0 0.2rem var(--auxColor);
+  transition: 0.5s;
+}
+.pricing-button:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 0.2rem var(--auxColor);
+  transition: 0.5s;
+}
+
+.pricing-button:active {
+  background-color: var(--backgroundColor);
+  transition: 0.5s;
+  color: var(--buttonColor);
 }
 
 /* 
@@ -541,6 +606,23 @@ Breakpoint: laptop
     gap: 1rem;
   }
 
+  .pricing-item {
+    gap: 0.5rem;
+    width: 30vw;
+  }
+
+  .pricing-icon {
+    width: 6vw;
+  }
+
+  .price {
+    font-size: 4rem;
+  }
+
+  .pricing-button {
+    min-width: 12vw;
+  }
+
   #footer-main {
     max-width: none;
     align-items: center;
@@ -571,10 +653,6 @@ Breakpoint: tablet
     font-size: var(--tabletHeroHeadingFontSize);
   }
 
-  /* #hero-form {
-    width: 71%;
-  } */
-
   #submit-button {
     font-size: 1rem;
   }
@@ -585,6 +663,14 @@ Breakpoint: tablet
     padding-left: 1rem;
 
     font-size: 1rem;
+  }
+
+  .pricing-icon {
+    width: 8vw;
+  }
+
+  .pricing-button {
+    min-width: 14vw;
   }
 }
 
@@ -628,5 +714,17 @@ Breakpoint: mobile
 
   #hero-img p {
     font-size: 10rem;
+  }
+
+  .pricing-item {
+    width: 37vw;
+  }
+
+  .pricing-icon {
+    width: 9vw;
+  }
+
+  .pricing-button {
+    min-width: 16vw;
   }
 }
